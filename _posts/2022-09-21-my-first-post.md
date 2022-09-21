@@ -1,3 +1,3 @@
-## Hello world!
+## How to create a blog with github host!
 
-This is my first post!
+- https://www.fast.ai/posts/2020-01-16-fast_template.html
