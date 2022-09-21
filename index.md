@@ -1,1 +1,1 @@
-I have a *blog*!
+Amat Victoria Curam!
