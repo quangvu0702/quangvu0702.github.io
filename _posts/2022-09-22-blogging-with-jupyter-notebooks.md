@@ -6,7 +6,6 @@ I write this article and convert it to markdown file using nbconvert.
 ```python
 import os
 from IPython.core.display import Javascript
-from IPython.display import display
 import time
 ```
 
@@ -38,5 +37,5 @@ this_notebook
 ```
 
     [NbConvertApp] Converting notebook 2022-09-22-blogging-with-jupyter-notebooks.ipynb to markdown
-    [NbConvertApp] Writing 814 bytes to ../_posts/2022-09-22-blogging-with-jupyter-notebooks.md
+    [NbConvertApp] Writing 761 bytes to ../_posts/2022-09-22-blogging-with-jupyter-notebooks.md
 
