@@ -4,14 +4,36 @@ I write this article and convert it to markdown file using nbconvert.
 
 
 ```python
-!jupyter nbconvert --to markdown 2022-09-22-Blogging-with-Jupyter-Notebooks.ipynb --output-dir=../_posts
+import os
+from IPython.core.display import Javascript
+from IPython.display import display
+
+display(Javascript('Jupyter.notebook.kernel.execute(\
+                       "this_notebook = " + "\'"\
+                       +Jupyter.notebook.notebook_name+"\'");'))
 ```
 
-    [NbConvertApp] Converting notebook 2022-09-22-Blogging-with-Jupyter-Notebooks.ipynb to markdown
-    [NbConvertApp] Writing 444 bytes to ../_posts/2022-09-22-Blogging-with-Jupyter-Notebooks.md
+
+    <IPython.core.display.Javascript object>
 
 
 
 ```python
-
+this_notebook
 ```
+
+
+
+
+    '2022-09-22-blogging-with-jupyter-notebooks.ipynb'
+
+
+
+
+```python
+!jupyter nbconvert --to markdown $this_notebook --output-dir=../_posts
+```
+
+    [NbConvertApp] Converting notebook 2022-09-22-blogging-with-jupyter-notebooks.ipynb to markdown
+    [NbConvertApp] Writing 8916 bytes to ../_posts/2022-09-22-blogging-with-jupyter-notebooks.md
+
