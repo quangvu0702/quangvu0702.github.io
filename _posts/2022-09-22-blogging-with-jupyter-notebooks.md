@@ -7,10 +7,13 @@ I write this article and convert it to markdown file using nbconvert.
 import os
 from IPython.core.display import Javascript
 from IPython.display import display
+import time
+```
 
-display(Javascript('Jupyter.notebook.kernel.execute(\
-                       "this_notebook = " + "\'"\
-                       +Jupyter.notebook.notebook_name+"\'");'))
+
+```python
+%%js
+IPython.notebook.kernel.execute('this_notebook = "' + IPython.notebook.notebook_name + '"')
 ```
 
 
@@ -31,9 +34,9 @@ this_notebook
 
 
 ```python
-!jupyter nbconvert --to markdown $this_notebook --output-dir=../_posts
+!jupyter nbconvert --to markdown {this_notebook} --output-dir=../_posts
 ```
 
     [NbConvertApp] Converting notebook 2022-09-22-blogging-with-jupyter-notebooks.ipynb to markdown
-    [NbConvertApp] Writing 806 bytes to ../_posts/2022-09-22-blogging-with-jupyter-notebooks.md
+    [NbConvertApp] Writing 814 bytes to ../_posts/2022-09-22-blogging-with-jupyter-notebooks.md
 
