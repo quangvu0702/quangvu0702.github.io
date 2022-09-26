@@ -35,5 +35,5 @@ this_notebook
 ```
 
     [NbConvertApp] Converting notebook 2022-09-22-blogging-with-jupyter-notebooks.ipynb to markdown
-    [NbConvertApp] Writing 8916 bytes to ../_posts/2022-09-22-blogging-with-jupyter-notebooks.md
+    [NbConvertApp] Writing 806 bytes to ../_posts/2022-09-22-blogging-with-jupyter-notebooks.md
 
