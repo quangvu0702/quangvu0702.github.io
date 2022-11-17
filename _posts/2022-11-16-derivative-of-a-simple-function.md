@@ -23,7 +23,7 @@ plt.plot(xs, ys)
 
 
 
-    [<matplotlib.lines.Line2D at 0x7fecd4b6cfd0>]
+    [<matplotlib.lines.Line2D at 0x7fd99e5fcf40>]
 
 
 
@@ -125,7 +125,7 @@ def draw_graph(root):
     f = graphviz.Digraph(format='svg', graph_attr={'rankdir':"LR"})
     nodes, edges = trace(root)
     for v in nodes:
-        f.node(str(id(v)), label="{%s|data %.2f|grad %.2f }" %(v.label, v.data, v.grad), shape='record')
+        f.node(str(id(v)), label=f"{v.label}|data {v.data}|grad {v.grad}", shape='record')
         if v._op:
             f.node(f'{str(id(v))}_{v._op}', label=f"{v._op}")
             f.edge(f'{str(id(v))}_{v._op}', str(id(v)))
@@ -165,15 +165,6 @@ draw_graph(L)
 ```
 
 
-
-
-    
-![svg](2022-11-16-derivative-of-a-simple-function_files/2022-11-16-derivative-of-a-simple-function_11_0.svg)
-    
-
-
-
-
 ```python
 L.grad = 1.
 f.grad = 4.
@@ -187,7 +178,7 @@ b.grad = -4
 
 ```python
 # adjust value base on grad to increase L
-alpha = 0.001
+alpha = 0.01
 a.data += a.grad * alpha
 b.data += b.grad * alpha
 c.data += c.grad * alpha
@@ -199,13 +190,6 @@ d = e + c; d.label = 'd'
 L = d * f; L.label = 'L'
 draw_graph(L)
 ```
-
-
-
-
-    Value(L=3.0719999999999987)
-
-
 
 
 ```python
@@ -233,9 +217,6 @@ def lol():
 lol()
 ```
 
-    -4.000000000008441
-
-
 ### Convert this file to md
 
 
@@ -250,25 +231,9 @@ IPython.notebook.kernel.execute('this_notebook = "' + IPython.notebook.notebook_
 ```
 
 
-    <IPython.core.display.Javascript object>
-
-
-
 ```python
 this_notebook
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    Input In [11], in <cell line: 1>()
-    ----> 1 this_notebook
-
-
-    NameError: name 'this_notebook' is not defined
-
 
 
 ```python
