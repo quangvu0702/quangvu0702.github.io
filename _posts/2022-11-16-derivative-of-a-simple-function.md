@@ -23,7 +23,7 @@ plt.plot(xs, ys)
 
 
 
-    [<matplotlib.lines.Line2D at 0x7fd99e5fcf40>]
+    [<matplotlib.lines.Line2D at 0x7f2750329fd0>]
 
 
 
@@ -73,6 +73,8 @@ d2 = a * b + c
 
 
 ```python
+import math
+
 class Value():
     def __init__(self, data, label='', _children=[], _op="", grad = 0):
         self.data = data
@@ -88,6 +90,10 @@ class Value():
     
     def __mul__(self, other):
         return Value(self.data * other.data, _children=[self, other], _op="*")
+    
+    def tanh(self):
+        tanh = math.tanh(self.data)
+        return Value(tanh, _children=[self, ], _op="tanh")
 ```
 
 
@@ -95,15 +101,8 @@ class Value():
 a = Value(2.0, 'a')
 b = Value(3.0, 'b')
 c = a * b; c.label = 'c'
-c
+o = c.tanh(); o.label = 'o'
 ```
-
-
-
-
-    Value(c=6.0)
-
-
 
 
 ```python
@@ -125,7 +124,7 @@ def draw_graph(root):
     f = graphviz.Digraph(format='svg', graph_attr={'rankdir':"LR"})
     nodes, edges = trace(root)
     for v in nodes:
-        f.node(str(id(v)), label=f"{v.label}|data {v.data}|grad {v.grad}", shape='record')
+        f.node(str(id(v)), label="{%s|data %s|grad %s}" %(v.label, v.data, v.grad) , shape='record')
         if v._op:
             f.node(f'{str(id(v))}_{v._op}', label=f"{v._op}")
             f.edge(f'{str(id(v))}_{v._op}', str(id(v)))
@@ -133,20 +132,6 @@ def draw_graph(root):
         f.edge(str(id(v1)), f'{str(id(v2))}_{v2._op}')
     return f
 ```
-
-
-```python
-draw_graph(c)
-```
-
-
-
-
-    
-![svg](2022-11-16-derivative-of-a-simple-function_files/2022-11-16-derivative-of-a-simple-function_9_0.svg)
-    
-
-
 
 
 ```python
@@ -163,6 +148,15 @@ L = d * f; L.label = 'L'
 ```python
 draw_graph(L)
 ```
+
+
+
+
+    
+![svg](2022-11-16-derivative-of-a-simple-function_files/2022-11-16-derivative-of-a-simple-function_10_0.svg)
+    
+
+
 
 
 ```python
@@ -192,6 +186,15 @@ draw_graph(L)
 ```
 
 
+
+
+    
+![svg](2022-11-16-derivative-of-a-simple-function_files/2022-11-16-derivative-of-a-simple-function_12_0.svg)
+    
+
+
+
+
 ```python
 def lol():
     h = 0.0001
@@ -217,6 +220,14 @@ def lol():
 lol()
 ```
 
+    -4.000000000008441
+
+
+
+```python
+
+```
+
 ### Convert this file to md
 
 
@@ -231,11 +242,29 @@ IPython.notebook.kernel.execute('this_notebook = "' + IPython.notebook.notebook_
 ```
 
 
+    <IPython.core.display.Javascript object>
+
+
+
 ```python
 this_notebook
 ```
 
 
+
+
+    '2022-11-16-derivative-of-a-simple-function.ipynb'
+
+
+
+
 ```python
 !jupyter nbconvert --to markdown {this_notebook} --output-dir=../_posts
 ```
+
+    [NbConvertApp] Converting notebook 2022-11-16-derivative-of-a-simple-function.ipynb to markdown
+    [NbConvertApp] Support files will be in 2022-11-16-derivative-of-a-simple-function_files/
+    [NbConvertApp] Making directory ../_posts/2022-11-16-derivative-of-a-simple-function_files
+    [NbConvertApp] Making directory ../_posts/2022-11-16-derivative-of-a-simple-function_files
+    [NbConvertApp] Writing 3584 bytes to ../_posts/2022-11-16-derivative-of-a-simple-function.md
+
