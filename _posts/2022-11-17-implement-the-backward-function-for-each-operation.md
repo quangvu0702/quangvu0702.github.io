@@ -27,7 +27,7 @@ def draw_graph(root):
     f = graphviz.Digraph(format='svg', graph_attr={'rankdir':"LR"})
     nodes, edges = trace(root)
     for v in nodes:
-        f.node(str(id(v)), label="{%s|data %.4f|grad %.4f}" %(v.label, v.data, v.grad) , shape='record')
+        f.node(str(id(v)), label=f"{v.label}|data {v.data}|grad {v.grad}", shape='record')
         if v._op:
             f.node(f'{str(id(v))}_{v._op}', label=f"{v._op}")
             f.edge(f'{str(id(v))}_{v._op}', str(id(v)))
@@ -147,12 +147,12 @@ L.backward()
 ```
 
     Value(L=0.375)
+    Value(e=3.0)
     Value(=0.125)
     Value(d=8.0)
+    Value(b=4.0)
     Value(c=4.0)
     Value(a=2.0)
-    Value(b=4.0)
-    Value(e=3.0)
 
 
 
@@ -224,5 +224,5 @@ this_notebook
     [NbConvertApp] Converting notebook 2022-11-17-implement-the-backward-function-for-each-operation.ipynb to markdown
     [NbConvertApp] Support files will be in 2022-11-17-implement-the-backward-function-for-each-operation_files/
     [NbConvertApp] Making directory ../_posts/2022-11-17-implement-the-backward-function-for-each-operation_files
-    [NbConvertApp] Writing 4377 bytes to ../_posts/2022-11-17-implement-the-backward-function-for-each-operation.md
+    [NbConvertApp] Writing 5104 bytes to ../_posts/2022-11-17-implement-the-backward-function-for-each-operation.md
 

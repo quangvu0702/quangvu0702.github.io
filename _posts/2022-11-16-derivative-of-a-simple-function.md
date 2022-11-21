@@ -23,7 +23,7 @@ plt.plot(xs, ys)
 
 
 
-    [<matplotlib.lines.Line2D at 0x7f2750329fd0>]
+    [<matplotlib.lines.Line2D at 0x7fbea0a3ffa0>]
 
 
 
@@ -124,7 +124,7 @@ def draw_graph(root):
     f = graphviz.Digraph(format='svg', graph_attr={'rankdir':"LR"})
     nodes, edges = trace(root)
     for v in nodes:
-        f.node(str(id(v)), label="{%s|data %s|grad %s}" %(v.label, v.data, v.grad) , shape='record')
+        f.node(str(id(v)), label=f"{v.label}|data {v.data}|grad {v.grad}", shape='record')
         if v._op:
             f.node(f'{str(id(v))}_{v._op}', label=f"{v._op}")
             f.edge(f'{str(id(v))}_{v._op}', str(id(v)))
@@ -266,5 +266,6 @@ this_notebook
     [NbConvertApp] Support files will be in 2022-11-16-derivative-of-a-simple-function_files/
     [NbConvertApp] Making directory ../_posts/2022-11-16-derivative-of-a-simple-function_files
     [NbConvertApp] Making directory ../_posts/2022-11-16-derivative-of-a-simple-function_files
-    [NbConvertApp] Writing 3584 bytes to ../_posts/2022-11-16-derivative-of-a-simple-function.md
+    [NbConvertApp] Making directory ../_posts/2022-11-16-derivative-of-a-simple-function_files
+    [NbConvertApp] Writing 4648 bytes to ../_posts/2022-11-16-derivative-of-a-simple-function.md
 
