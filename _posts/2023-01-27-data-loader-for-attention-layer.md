@@ -1,4 +1,4 @@
-# Review data and create data loader
+# 2023-01-27 Review data and create data loader
 
 
 ```python
@@ -357,20 +357,33 @@ sent = model.generate(idx=torch.zeros((1,1), dtype=torch.long), max_new_token=50
 print(decode(sent[0].tolist()))
 ```
 
+    
+    At g ksentheateshanemowispacthe
+    O: us,
+    
+    WANGournodofs.
+    Prillvee.
+    FONGous d ve whe,
+    An.
+    CKI the y niff dy!
+    Whitariravif litourso om
+    
+    Dulidakemereeliny y,
+    
+    CUSpthe mpu;
+    te, in,
+    Fieserin t tho bulla dang BRWhith's ensat is hourt be DYe; nore Bod forse, ur, bothave ge.
+    pore to oitim'lces:
+    
+    RD t ore athempsie f upecelise hassh s!UCon ad faler iceale wain athig ta hod kne:
+    TENDWend tein ly omy Dundis, rinthalld athakingans; IO mingeserd nther on teqMar! st ms my w your y ficorop-may:
+    ARalt y nooun ast
 
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    Input In [19], in <cell line: 15>()
-         14 from matplotlib import pyplot
-         15 with torch.no_grad():
-    ---> 16     y = torch.tensor(losses).view(100, -1).mean(0)
-         17     pyplot.plot(range(len(y)), y)
-         19 sent = model.generate(idx=torch.zeros((1,1), dtype=torch.long), max_new_token=1000)
 
 
-    NameError: name 'losses' is not defined
+    
+![png](2023-01-27-data-loader-for-attention-layer_files/2023-01-27-data-loader-for-attention-layer_19_1.png)
+    
 
 
 
@@ -384,6 +397,29 @@ with torch.no_grad():
 sent = model.generate(idx=torch.zeros((1,1), dtype=torch.long), max_new_token=500)
 print(decode(sent[0].tolist()))
 ```
+
+    
+    Whart lind yof Iniloucisas ndor:
+    Thal pe's, pe t chthay arvande; vos ous panue ad inghndl ang:
+    che wag gind t-llse?
+    Het cilly's hat hn jof CARWhe bithas che p fe: wenghanbyam sy fthenlme be,
+    Tut ordesssithe athethink.
+    cepurevor min.
+    Holit: bor INoyorhe;
+    TEETha y,
+    D ICI thed
+    SHMENond thorerd tstron th focke' s ched couno he acethod fo ty whemis floueftitho chald ikin'dind; we athithoundre intarchyecarin,
+    
+    INIComy, s t, akiaucouronowore ISe'l!
+    METEE:
+    TE: Wandll naganithil yes, meayoe f tory iveth 
+
+
+
+    
+![png](2023-01-27-data-loader-for-attention-layer_files/2023-01-27-data-loader-for-attention-layer_20_1.png)
+    
+
 
 ### Convert this file to md
 
@@ -399,11 +435,26 @@ IPython.notebook.kernel.execute('this_notebook = "' + IPython.notebook.notebook_
 ```
 
 
+    <IPython.core.display.Javascript object>
+
+
+
 ```python
 this_notebook
 ```
 
 
+
+
+    '2023-01-27-data-loader-for-attention-layer.ipynb'
+
+
+
+
 ```python
 !jupyter nbconvert --to markdown {this_notebook} --output-dir=../_posts
 ```
+
+    [NbConvertApp] Converting notebook 2023-01-27-data-loader-for-attention-layer.ipynb to markdown
+    [NbConvertApp] Writing 11339 bytes to ../_posts/2023-01-27-data-loader-for-attention-layer.md
+
