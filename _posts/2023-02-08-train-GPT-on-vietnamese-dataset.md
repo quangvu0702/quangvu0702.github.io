@@ -34,6 +34,14 @@ text = truyen_kieu
 
 
 ```python
+print(text[0:330])
+```
+
+    ['trăm', 'năm', 'trong', 'cõi', 'người', 'ta', ',', '', '\n', 'chữ', 'tài', 'chữ', 'mệnh', 'khéo', 'là', 'ghét', 'nhau', '\n', '', '\n', 'trải', 'qua', 'một', 'cuộc', 'bể', 'dâu', '\n', 'những', 'điều', 'trông', 'thấy', 'mà', 'đau', 'đớn', 'lòng', '\n', '', '\n', 'lạ', 'gì', 'bỉ', 'sắc', 'tư', 'phong', ',', '', '\n', 'trời', 'xanh', 'quen', 'thói', 'má', 'hồng', 'đánh', 'ghen', '\n', '', '\n', 'cảo', 'thơm', 'lần', 'giở', 'trước', 'đèn', ',', '', '\n', 'phong', 'tình', 'cổ', 'lục', 'còn', 'truyền', 'sử', 'xanh', '\n', '', '\n', 'rằng', 'năm', 'gia', 'tĩnh', 'triều', 'minh', ',', '', '\n', 'bốn', 'phương', 'phẳng', 'lặng', ',', '', 'hai', 'kinh', 'vững', 'vàng', '\n', '', '\n', 'có', 'nhà', 'viên', 'ngoại', 'họ', 'vương', ',', '', '\n', 'gia', 'tư', 'nghĩ', 'cũng', 'thường', 'thường', 'bực', 'trung', '\n', '', '\n', 'một', 'trai', 'con', 'thứ', 'rốt', 'lòng', ',', '', '\n', 'vương', 'quan', 'là', 'chữ', ',', '', 'nối', 'dòng', 'nho', 'gia', '\n', '', '\n', 'đầu', 'lòng', 'hai', 'ả', 'tố', 'nga', ',', '', '\n', 'thúy', 'kiều', 'là', 'chị', ',', '', 'em', 'là', 'thúy', 'vân', '\n', '', '\n', 'mai', 'cốt', 'cách', ',', '', 'tuyết', 'tinh', 'thần', ',', '', '\n', 'mỗi', 'người', 'một', 'vẻ', ',', '', 'mười', 'phân', 'vẹn', 'mười', '\n', '', '\n', 'vân', 'xem', 'trang', 'trọng', 'khác', 'vời', ',', '', '\n', 'khuôn', 'trăng', 'đầy', 'đặn', ',', '', 'nét', 'ngài', 'nở', 'nang', '\n', '', '\n', 'hoa', 'cười', 'ngọc', 'thốt', 'đoan', 'trang', ',', '', '\n', 'mây', 'thua', 'nước', 'tóc', ',', '', 'tuyết', 'nhường', 'màu', 'da', '\n', '', '\n', 'kiều', 'càng', 'sắc', 'sảo', ',', '', 'mặn', 'mà', ',', '', '\n', 'so', 'bề', 'tài', ',', '', 'sắc', ',', '', 'lại', 'là', 'phần', 'hơn', '\n', '', '\n', 'làn', 'thu', 'thủy', ',', '', 'nét', 'xuân', 'sơn', ',', '', '\n', 'hoa', 'ghen', 'thua', 'thắm', ',', '', 'liễu', 'hờn', 'kém', 'xanh', '\n', '', '\n', 'một', ',', '', 'hai', 'nghiêng', 'nước', 'nghiêng', 'thành', ',', '', '\n', 'sắc', 'đành', 'đòi', 'một', ',', '', 'tài', 'đành', 'họa', 'hai', '\n', '', '\n', 'thông', 'minh', 'vốn', 'sẵn', 'tư', 'trời', ',', '', '\n', 'pha', 'nghề', 'thi', 'họa', ',', '', 'đủ', 'mùi', 'ca', 'ngâm', '\n', '', '\n', 'cung', 'thương']
+
+
+
+```python
 # Here is all unique character that occur in this text
 chars = sorted(list(set(text)))
 vocab_size = len(chars)
@@ -50,7 +58,7 @@ print(encode("tôi là".split(" ")))
 print(decode(encode("tôi là".split(" "))))
 ```
 
-    [2760, 1248]
+    [2175, 936]
     tôi là
 
 
@@ -65,21 +73,21 @@ print(data.shape, data.dtype)
 data[0:100]
 ```
 
-    torch.Size([49748]) torch.int64
+    torch.Size([32186]) torch.int64
 
 
 
 
 
-    tensor([2646, 1905, 2606,  498, 1685, 2364,    6,    0,    1,  449, 2715,  449,
-            1554, 1096, 1248,  742, 1740,    1,    0,    1, 2664, 2055, 1575,  467,
-             225,  632,    1, 1842, 3155, 2638, 2509, 1454, 3138, 3318, 1289,    1,
-               0,    1, 1332,  838,  227, 2331, 2781, 1991,    6,    0,    1, 2689,
-            3001, 2063, 2466, 1464, 1022, 3185,  738,    1,    0,    1,  535, 2485,
-            1348,  821, 2653, 3202,    6,    0,    1, 1991, 2744,  564, 1406,  492,
-            2610, 2359, 3001,    1,    0,    1, 2193, 1905,  749, 2777, 2602, 1433,
-               6,    0,    1,  236, 2024, 2040, 1367,    6,    0,  882, 1156, 2992,
-            2893,    1,    0,    1])
+    tensor([2080, 1457, 2046,  330, 1291, 1827,    3,    0,    1,  291, 2134,  291,
+            1183,  811,  936,  524, 1336,    1,    0,    1, 2095, 1579, 1201,  302,
+             111,  432,    1, 1410, 2495, 2072, 1963, 1107, 2481, 2629,  971,    1,
+               0,    1, 1008,  606,  112, 1798, 2192, 1528,    3,    0,    1, 2112,
+            2380, 1586, 1921, 1116,  758, 2522,  520,    1,    0,    1,  359, 1939,
+            1022,  592, 2085, 2537,    3,    0,    1, 1528, 2161,  378, 1067,  324,
+            2050, 1823, 2380,    1,    0,    1, 1690, 1457,  529, 2188, 2042, 1091,
+               3,    0,    1,  119, 1555, 1568, 1037,    3,    0,  644,  860, 2372,
+            2289,    1,    0,    1])
 
 
 
@@ -95,7 +103,7 @@ len(train_data), len(val_data)
 
 
 
-    (48753, 995)
+    (31542, 644)
 
 
 
@@ -266,13 +274,13 @@ def train(lr=0.001, model_name=None, only_load_model=False):
 
 
 ```python
-B, T, C = 64, 64, 384 ; # batch, time, channel
+B, T, C = 64, 64, 36 ; # batch, time, channel
 n_embd = C
 batch_size, block_size = B, T
-max_iter = 5000
+max_iter = 25000
 num_heads = 6
 num_blocks = 6
-eval_iters = 500
+eval_iters = 1000
 drop_out = 0.2
 head_size = n_embd / num_heads
 xb, yb = get_batch()
@@ -288,115 +296,65 @@ print(loss)
 ```
 
     torch.Size([64, 64]) torch.Size([64, 64])
-    13.270579 M parameters
-    tensor(8.3334, device='cuda:0', grad_fn=<NllLossBackward0>)
+    0.293041 M parameters
+    tensor(7.9529, device='cuda:0', grad_fn=<NllLossBackward0>)
 
 
 
 ```python
-train(lr=lr, model_name='combine.pt')
-
-sent = model.generate(idx=torch.zeros((1,1), dtype=torch.long).to(device), max_new_token=500)
-print(decode(sent[0].tolist()))
+train(lr=lr, model_name='combine.pt_v4')
 ```
 
-    Train loss: 0.16425329446792603. Val loss: 0.16477559506893158. 
+    Train loss: 3.715602397918701. Val loss: 3.7170333862304688. 
     saving checkpoint to ../checkpoints
-    Train loss: 0.13645370304584503. Val loss: 0.1356091946363449. 
+    Train loss: 2.451805353164673. Val loss: 2.4547319412231445. 
     saving checkpoint to ../checkpoints
-    Train loss: 0.1277822107076645. Val loss: 0.12738379836082458. 
+    Train loss: 1.6461000442504883. Val loss: 1.6471295356750488. 
     saving checkpoint to ../checkpoints
-    Train loss: 0.12291053682565689. Val loss: 0.1230657771229744. 
+    Train loss: 1.167556881904602. Val loss: 1.166641116142273. 
     saving checkpoint to ../checkpoints
-    Train loss: 0.12174422293901443. Val loss: 0.12226003408432007. 
+    Train loss: 0.8847333192825317. Val loss: 0.8847111463546753. 
     saving checkpoint to ../checkpoints
-    Train loss: 0.12167149782180786. Val loss: 0.12158866226673126. 
+    Train loss: 0.7004756927490234. Val loss: 0.6995299458503723. 
     saving checkpoint to ../checkpoints
-    Train loss: 0.11997853964567184. Val loss: 0.1197664737701416. 
+    Train loss: 0.609959602355957. Val loss: 0.6089354157447815. 
     saving checkpoint to ../checkpoints
-    Train loss: 0.11667455732822418. Val loss: 0.11683859676122665. 
+    Train loss: 0.5567530393600464. Val loss: 0.5564932227134705. 
     saving checkpoint to ../checkpoints
-    Train loss: 0.11371710896492004. Val loss: 0.11407747864723206. 
+    Train loss: 0.4830600321292877. Val loss: 0.48131075501441956. 
     saving checkpoint to ../checkpoints
-    Train loss: 0.11282995343208313. Val loss: 0.11278162151575089. 
+    Train loss: 0.45059171319007874. Val loss: 0.450531929731369. 
     saving checkpoint to ../checkpoints
-     
-     ở người thấy ai người cũ cũng yêu ,  
-     xôn xao oanh yến rập rìu trúc mai 
-      
-     tin nhạn vẩn lá thư bài ,  
-     đưa người cửa trước rước người cửa sau 
-      
-     lạ tai nghe chửa biết đâu ,  
-     xem tình ra cũng những màu dở dang 
-      
-     lễ xong hương hỏa cái đường ,  
-     nổi loan một được khôn sương 
-      
-     nghĩ tình ghi nghĩa mẹ kiếp gia 
-      
-     sao ngay biện bạch một bề ,  
-     dạy cho má phấn lại về quê 
-      
-     thấy lời nghiêm huấn rành rành ,  
-     đánh liều sinh mới lấy tình nài kêu 
-      
-     rằng: con biết tội đã nhiều ,  
-     dẫu rằng sấm sét búa rìu cũng cam 
-      
-     trót vì tay đã nhúng chàm ,  
-     dại rồi còn biết khôn làm sao đây 
-      
-     cùng nhau vả tiếng một ngày ,  
-     ôm cầm ai nỡ dứt dây cho đành 
-      
-     lượng trên quyết chẳng thương tình ,  
-     bạc đen thôi có tiếc mình làm chi 
-      
-     thấy lời sắt đá tri tri ,  
-     sốt gan ông mới cáo quì cửa công 
-      
-     đất bằng nổi sóng đùng đùng ,  
-     phủ đường sai lá phiếu hồng thôi tra 
-      
-     cùng nhau theo gót sai nha ,  
-     song song vào trước sân hoa lạy quì 
-      
-     trông lên mặt sắt đen sì ,  
-     lập nghiêm trước đã ra uy nặng lời: 
-     gã kia dại nết chơi bời ,  
-     mà con người thế là người đong đưa 
-      
-     tuồng chi hoa thải hương thừa ,  
-     mượn màu son phấn đánh lừa con đen 
-      
-     suy trong tình trạng nguyên đơn ,  
-     bề nào thì cũng chưa yên bề nào 
-      
-     phép công chiếu án luận vào 
-      
-     có hai đường ấy muốn sao mặc mình 
-      
-     một là cứ phép gia hình ,  
-     một là lại cứ lầu xanh phó về 
-      
-     nàng rằng: đã quyết một bề! 
-     nhện này vương lấy tơ kia mấy lần 
-      
-     đục trong thân cũng là thân 
-      
-     yếu thơ vâng chịu trước sân lôi đình! 
-     dạy rằng: cứ phép gia hình! 
-     ba cây chập lại một cành mẫu đơn 
-      
-     phận đành chi dám kêu kia ,  
-     phận sao phận bạc như vôi ,  
-     đã đành nước chẩy hoa trôi lỡ làng 
-      
-     ôi kim lang! hỡi kim lang! 
-     thôi thôi thiếp đã phụ chàng từ đây! 
-     cạn lời hồn ngất máu say ,  
-     một hơi lặng ngắt
+    Train loss: 0.42473775148391724. Val loss: 0.42357054352760315. 
+    saving checkpoint to ../checkpoints
+    Train loss: 0.40449753403663635. Val loss: 0.4051833748817444. 
+    saving checkpoint to ../checkpoints
+    Train loss: 0.39978060126304626. Val loss: 0.4000585973262787. 
+    saving checkpoint to ../checkpoints
+    Train loss: 0.3728296756744385. Val loss: 0.3725215494632721. 
+    saving checkpoint to ../checkpoints
+    Train loss: 0.36801204085350037. Val loss: 0.36851534247398376. 
+    saving checkpoint to ../checkpoints
+    Train loss: 0.3432505428791046. Val loss: 0.34522923827171326. 
+    saving checkpoint to ../checkpoints
+    Train loss: 0.33629897236824036. Val loss: 0.33626800775527954. 
+    saving checkpoint to ../checkpoints
+    Train loss: 0.33941349387168884. Val loss: 0.34081289172172546. 
+    saving checkpoint to ../checkpoints
+    Train loss: 0.3141455352306366. Val loss: 0.31441447138786316. 
+    saving checkpoint to ../checkpoints
+    Train loss: 0.3109095096588135. Val loss: 0.31082460284233093. 
+    saving checkpoint to ../checkpoints
+    Train loss: 0.29889073967933655. Val loss: 0.2982620596885681. 
+    saving checkpoint to ../checkpoints
+    Train loss: 0.29737386107444763. Val loss: 0.29717889428138733. 
+    saving checkpoint to ../checkpoints
+    Train loss: 0.2884153425693512. Val loss: 0.2893764078617096. 
+    saving checkpoint to ../checkpoints
+    Train loss: 0.2856851816177368. Val loss: 0.28586092591285706. 
+    saving checkpoint to ../checkpoints
+    Train loss: 0.2757451832294464. Val loss: 0.27520686388015747. 
+    saving checkpoint to ../checkpoints
 
 
 
@@ -406,97 +364,196 @@ print(decode(sent[0].tolist()))
 ```
 
      
-     nàng càng trời thẳm đất dày! 
-     thân này đã bỏ những ngày ra đi 
+     mắc lừa lọc đã dành có nơi 
       
-     thôi thì thôi có tiếc gì! 
-     sẵn dao tay áo tức thì giở ra 
+     rõ ràng mở mắt đầy xưa nay ,  
+     thầm một chiều quyền xót xa 
       
-     sợ gan nát ngọc liều hoa! 
-     mụ còn trông mặt nàng đà quá tay 
+     gặp từ hương lửa tàn ,  
+     thật tin nghe hẳn nghìn sầu 
+      chia vò hồng nhan ,  
+     khách hồng rụng một lời gửi 
       
-     thương ôi tài sắc bậc này ,  
-     một dao oan nghiệt đứt dây phong trần 
+     vân trăng nọ hoa đào ,  
+     lòng kia giữ giàng họ thúc một xa 
       
+     dâng thư trước đã thẹn nàng ,  
+     khóc người thấy bóng trăng hoa? 
+     mặt nào ai có hôm ngồi ,  
+     là nhiều sao nói cười như không 
       
-     nỗi oan vỡ lở xa gần ,  
-     trong nhà người chật một lần như nêm 
+     vỗ nay trong miệng những ngày đào ,  
+     thương sao hẳn thành con sai quan thì 
       
-     nàng thì bằn bặt giấc tiên ,  
-     mụ thì cầm cập mặt nhìn hồn bay 
+     rằng sông cũng bớt vài trên một lời ,  
+     ngẫm những gạt lệ ,  
+     ngập ngừng lại gieo lấy mình xa 
       
-     vực nàng vào chốn hiên tây ,  
-     cắt người coi sóc chạy thầy thuốc thang 
+     đàn khoan bắt quì ,  
+     sinh đà gieo vàng chờ được nào! 
+     tơ vì nước đến sau ,  
+     cơ từ đã thu ngại công 
       
-     nào hay chưa hết trần duyên ,  
-     trong mê dường đã đứng bên một nàng 
+     non người quốc sắc nước non ,  
+     tiếc thay huyên rõ ràng đó luồn đây 
       
-     rỉ rằng: nhân quả dở dang ,  
-     đã toan trốn nợ đoạn trường được sao? 
-     số còn nặng nợ má đào ,  
-     người dầu muốn quyết trời nào đã cho 
+     thầm lời đã sống đọa theo sau 
       
-     hãy xin hết kiếp liễu bồ ,  
-     sông tiền đường sẽ hẹn hò về sau 
+     thương nàng báo đáp ân tình ,  
+     chút nàng ba sinh nàng ra xin đi! 
+     từ rằng: nghề mọn nhà ,  
+     lòng thề nọ ngẩn ngơ ngẩn ngơ ngẩn sầu 
       
-     thuốc thang suốt một ngày thâu ,  
-     giấc mê nghe đã dàu dàu vừa tan 
+     bóng tà tà dâu ,  
+     bóng tà tà đã ra phụ phàng ,  
+     tiểu thư đã áp thẳng tìm tòi ngẩn ngơ 
       
-     tú bà chực sẵn bên màn ,  
-     lựa lời khuyên giải mơn man băng tơ 
+     tơi am mây tạnh là ,  
+     thiết quân có mụ vì nhà thường ,  
+     lửa phiền càng dập càng khêu mối phiền 
       
-     trông vào một những ngày xưa 
+     một lòng trong tiền văn lão cũng chôn sương ,  
+     giãi lòng: 
+     nhớ nơi mang những gạt vững chiều thần ,  
+     hoa trôi dần dần mà đến đây? 
+     êm ả ghềnh sẵn hai bề vẹn hai! 
+     thôi ta sẽ chớ tình máu không 
       
-     bẻ bai rủ rỉ tiếng tơ ,  
-     trầm bay nhạt khói gió đưa lay rèm 
+     ngẫm duyên ta có mọi đồ ,  
+     đã buồn cả ruột ngàn đã lề 
       
-     dường như bên nóc trước thềm ,  
-     tiếng kiều đồng vọng bóng xiêm mơ màng ,  
-     bởi lòng tạc đá ghi vàng ,  
-     tưởng nàng nên lại thấy nàng về đây 
+     nghề chơi lại càng dào mạch tương 
       
+     đòi phen đổi mai ao ,  
+     đủ ngần quả kiếp người đây ,  
+     mười phần oanh 
+     hai văn hơi khéo vỡ hai ,  
+     giắt mặt mà liễu cờ mấy khi! 
+     hoa bèo nữa vàng sắm sửa muộn xưa 
       
-     những là phiền muộn đêm ngày ,  
-     xuân thu biết đã đổi thay mấy lần? 
-     chế khoa gặp hội trường văn 
+     có điều ngang ngửa vì này bèo ,  
+     lòng sâu nghĩa người nhỏ xôn xao 
       
-     vương ,  kim cùng chiếm bảng xuân một ngày 
+     người nách thước còn ngần này ,  biết trong quân chầy 
       
-     cửa trời rộng mở đường mây ,  
-     hoa chào ngõ hạnh hương bay dặm phần 
-      
-     chàng vương nhớ đến xa gần ,  
-     sang nhà chung lão tạ ân chu tuyền 
-      
-     tình xưa ân trả nghĩa đền ,  
-     gia thân lại mới kết duyên châu trần 
-      
-     kim từ nhẹ bước thanh vân ,  
-     nỗi nàng càng nghĩ xa gần càng thương 
-      
-     ấy ai dặn ngọc thề vàng ,  
-     bây giờ kim mã ngọc đường với ai? 
-     ngọn bèo chân sóng lạc loài ,  
-     nghĩ mình vinh hiển thương người lưu ly 
-      
-     vâng ra ngoại nhậm lâm truy ,  
-     quan san nghìn dặm thê nhi một
+     hoa truyền sửa lần mơ chay lòng ,  
+     tìm
 
 
 
 ```python
-sent = model.generate(torch.tensor([encode("nặng lời".split(" "))]).to(device), max_new_token=50)
+sent = model.generate(idx=torch.zeros((1,1), dtype=torch.long).to(device), max_new_token=500)
 print(decode(sent[0].tolist()))
 ```
 
-    nặng lời ,  
-     rẩy xin chén nước cho người thác oan 
+     
+     chàng về viện sách nàng dời lầu trang 
       
-     bây giờ trâm gẫy bình tan ,  
-     kể làm sao xiết muôn vàn ái ân 
       
-     trăm nghìn gửi lại tình quân ,  
-     tơ duyên ngắn ngủi có ngần ấy
+     từ phen đá biết tuổi vàng ,  
+     tình càng vén vì hoa kề ,  
+     mấy lòng vừa ghé xiêu xiêu xiêu xiêu xiêu 
+      
+     vài tuần bạc ác sầu cho phu 
+      
+     xuân nước dẫy sóng đủ đường ,  
+     phép về xuân dù phường chia hai 
+      
+     những là một lần mới ra ,  
+     chàng càng trông tỏ thức hồng ,  
+     rành rành tích việt duyên ngồi 
+      
+      
+     lấy điều trúc lục e lệ ,  
+     khóc than ngọc cho nàng tình đầu ,  
+     thẹn mình chén gặp nàng cần dịu dàng! 
+     mụ tháng thật quẩn trà cây 
+      
+     mảnh người dưới nguyệt thân ,  
+     chàng vương nghe tiếng vàng liêu bưng kín chẳng ưa? 
+      
+     gia hoa đào khuya khăn ,  
+     đất bằng ăn ngày một đau 
+      
+     nhớ nơi hằng thủy mai sau! 
+     những là nặng nắng mưa ,  
+     buồng không thương chi cho khi về lầu xanh 
+      
+     rằng sông chẳng chút cũ tràng oanh ,  
+     uốn lưng bút giá dày đã đành ,  
+     gấp người còn có ai sở trác giữa trời 
+      
+     bắt về đến kim ,  
+     mụ quản huyền đâu đã giục đành ,  
+     chiều lòng biết có nợ chiều đời 
+      
+     gieo trời cạn ý đà sương được lời 
+      
+     tình nhân mới hạ công ,  
+     còn nhiều đã có gương truyền hôm nay! 
+     tinh trướng nghe nói chẳng lựa sẻ lửa nhân ,  
+     vân rằng: ái khỏi kiến lửa ba 
+      
+     cửa đóng then nhặt gói về lầu 
+      
+     mặn bất ý rụt rè ,  
+     hoa kia đã chắp áo dài ,  
+     xót liễu nước chưa vẹn chữ đồng tự hôn 
+      
+     cải nhậm hương lân nồi trời 
+      
+     sự nhà hành viện xưa nay ,  
+     cũng đâu đã về chia cao 
+      
+     bao nhiêu đoạn khổ ,  tình chẳng treo trên 
+      
+     sự tình chàng thúc một tỉnh say ,  
+     tin sương gieo xuống bóng cờ mấy hồi khốn hay 
+      
+     đầy sông tiền riêng chưa nện cầu vắng đâu 
+      
+     sợ lần khân quá ra ,  
+     đây vì hoa cuối xuân đường trần hình ,  
+     một phen đá biết là lỡ sinh 
+      
+     giác duyên ngắn chén tài hoa tự tôi 
+      
+     hơn người ngồi dai ,  
+     nhìn nàng ra nặng nào thôi đền tình 
+      
+     khuyển thơ ngây thơ ngây thơ ngây 
+      
+     thoạt gánh như nung gan
+
+
+
+```python
+sent = model.generate(torch.tensor([encode("mây trôi".split(" "))]).to(device), max_new_token=150)
+print(decode(sent[0].tolist()))
+```
+
+    mây trôi bèo dạt đã đành ,  
+     lại càng đứng lặng nhìn được điều 
+      
+     giọng kiều rền rĩ trướng loan ,  
+     nhà huyên chợt sinh? 
+     bàn ngần ngọn vì sự bất xưa 
+     sá đá tài trong ,  
+     giở đồ chuông khánh các lạ đời 
+      
+     tâm thu ,  
+     khi vào điều của dây thường ,  
+     lập năm bể mới hay không? 
+     sâm thương bằng tiện ở bắc mặn 
+      
+     ghế quanh những khan giọng tình ,  
+     dập dìu bỗng khuôn đó cầm! 
+     thời làng đình nghe hiếu tâm ,  
+     ba bề vẹn một nhà thì nên bay bất kỳ ,  
+     xôn xao ngoài hoặc có xuân đường vân mới giãi chiều 
+      
+     thưa rằng: sắc lâm truy ,  
+     sắc đành đã
 
 
 ### Convert this file to md
@@ -526,7 +583,7 @@ this_notebook
 
     NameError                                 Traceback (most recent call last)
 
-    Input In [18], in <cell line: 1>()
+    Input In [19], in <cell line: 1>()
     ----> 1 this_notebook
 
 
